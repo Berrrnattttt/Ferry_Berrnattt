@@ -23,7 +23,7 @@ Untuk perintahnya bisa menggunkan perintah seperti ini :
 
 Dan hasilnya akan seperti ini :
 
-![image](https://github.com/Heryantokurnia/Praktikum-4/assets/141998024/4e580583-3bb5-4b86-84bd-dce0ff01e338)
+![image]
 
 ### 2.	Tampilkan pegawai yang tunjangannya NULL!
 
@@ -35,7 +35,7 @@ Untuk perintahnya bisa menggunkan perintah seperti ini :
 
 Dan hasilnya akan seperti ini :
 
-![image](https://github.com/Heryantokurnia/Praktikum-4/assets/141998024/16950ed6-2d1c-4333-bd8b-3960bf6aa8cf)
+![image]
 
 ### 3.	Tampilkan pegawai yang tunjangannya tidak NULL!
 
@@ -47,11 +47,11 @@ Untuk perintahnya bisa menggunkan perintah seperti ini :
 
 Dan hasilnya akan seperti ini :
 
-![image](https://github.com/Heryantokurnia/Praktikum-4/assets/141998024/0ffebe47-b6ec-468d-8228-1b373a62372a)
+![image]
 
 ## HASIL DARI 1 - 3
 
-![image](https://github.com/Heryantokurnia/Praktikum-4/assets/141998024/06839f76-6c14-485a-b482-7daad459ad16)
+![image]
 
 ### 4.	Tampilkan/hitung jumlah baris/record tabel pegawai!
 
@@ -63,7 +63,7 @@ Untuk perintahnya bisa menggunkan perintah seperti ini :
 
 Dan hasilnya akan seperti ini :
 
-![image](https://github.com/Heryantokurnia/Praktikum-4/assets/141998024/c5c0da82-9f04-44af-88af-2f9572bd8b4d)
+![image]
 
 ### 5.	Tampilkan/hitung jumlah total gaji di tabel pegawai!
 
@@ -76,7 +76,7 @@ Untuk perintahnya bisa menggunkan perintah seperti ini :
 
 Dan hasilnya akan seperti ini :
 
-![image](https://github.com/Heryantokurnia/Praktikum-4/assets/141998024/3d86721b-8c25-4dcb-bae3-341e658f30f6)
+![image]
 
 ### 6.	Tampilkan/hitung rata-rata gaji pegawai!
 
@@ -88,7 +88,7 @@ Untuk perintahnya bisa menggunkan perintah seperti ini :
 
 Dan hasilnya akan seperti ini :
 
-![image](https://github.com/Heryantokurnia/Praktikum-4/assets/141998024/5b9375f1-df3d-4fab-b0b1-f33300d77fc1)
+![image]
 
 ### 7.	Tampilkan gaji terkecil!
 
@@ -100,7 +100,7 @@ Untuk perintahnya bisa menggunkan perintah seperti ini :
 
 Dan hasilnya akan seperti ini :
 
-![image](https://github.com/Heryantokurnia/Praktikum-4/assets/141998024/d3b917e8-7005-49e3-8ce9-a2015ec1a941)
+![image]
 
 ### 8.	Tampilkan gaji terbesar!
 
@@ -112,7 +112,7 @@ Untuk perintahnya bisa menggunkan perintah seperti ini :
 
 Dan hasilnya akan seperti ini :
 
-![image](https://github.com/Heryantokurnia/Praktikum-4/assets/141998024/884ddeb8-5530-496d-ad03-43c5b2b60cae)
+![image]
 
 ## TUGAS PRAKTIKUM 4 (TABEL HEWAN)
 1.	Tampilkan jumlah hewan yang dimiliki setiap owner
@@ -134,7 +134,7 @@ Untuk perintahnya bisa menggunkan perintah seperti ini :
 
 Dan hasilnya akan seperti ini :
 
-![image](https://github.com/Heryantokurnia/Praktikum-4/assets/141998024/c2f79225-7d45-4015-b21c-53789b8a403e)
+![image]
 
 ### 2.	Tampilkan jumlah hewan berdasarkan spesies
 
@@ -146,7 +146,7 @@ Untuk perintahnya bisa menggunkan perintah seperti ini :
 
 Dan hasilnya akan seperti ini :
 
-![image](https://github.com/Heryantokurnia/Praktikum-4/assets/141998024/c7577f83-33aa-4bd2-85fc-f1353e0c1f63)
+![image]
 
 ### 3.	Tampilkan jumlah hewan berdasarkan jenis kelamin
 
@@ -158,7 +158,7 @@ Untuk perintahnya bisa menggunkan perintah seperti ini :
 
 Dan hasilnya akan seperti ini :
 
-![image](https://github.com/Heryantokurnia/Praktikum-4/assets/141998024/2dba9be5-ee55-4bf0-b742-b4231492f3d0)
+![image]
 
 ### 4.	Tampilkan jumlah hewan berdasarkan spesies dan jenis kelamin
 
@@ -170,7 +170,7 @@ Untuk perintahnya bisa menggunkan perintah seperti ini :
 
 Dan hasilnya akan seperti ini :
 
-![sex and species](https://github.com/Heryantokurnia/Praktikum-4/assets/141998024/10627e1b-3f61-418f-8c6d-251791f97b28)
+![sex and species]
 
 ### 5.	Tampilkan jumlah hewan berdasarkan spesis (cat dan dog saja) dan jenis kelamin
 
@@ -182,7 +182,7 @@ Untuk perintahnya bisa menggunkan perintah seperti ini :
 
 Dan hasilnya akan seperti ini :
 
-![image](https://github.com/Heryantokurnia/Praktikum-4/assets/141998024/2c3dc657-a23a-4053-befe-1e91a888b8cc)
+![image]
 
 ### 6.	Tampilkan jumlah hewan berdasarkan jenis kelamin yang diketahui saja
 
@@ -194,4 +194,4 @@ Untuk perintahnya bisa menggunkan perintah seperti ini :
 
 Dan hasilnya akan seperti ini :
 
-![image](https://github.com/Heryantokurnia/Praktikum-4/assets/141998024/e1ccaba2-de53-4839-8ee6-be25e869a72d)
+![image]
