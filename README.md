@@ -1,197 +1,110 @@
-# Praktikum-4
+# Praktikum-5
 
-## TUGAS PRAKTIKUM 4 (TABEL PEGAWAI)
-1.	Tampilkan pegawai yang gajinya bukan 2.000.000 dan 1.250.000 !
-2.	Tampilkan pegawai yang tunjangannya NULL!
-3.	Tampilkan pegawai yang tunjangannya tidak NULL!
-4.	Tampilkan/hitung jumlah baris/record tabel pegawai!
-5.	Tampilkan/hitung jumlah total gaji di tabel pegawai!
-6.	Tampilkan/hitung rata-rata gaji pegawai!
-7.	Tampilkan gaji terkecil!
-8.	Tampilkan gaji terbesar!
+## LATIHAN !!!
 
-PENJELASAN
+1. Lakukan join table Mahasiswa dan Dosen
 
+2. Lakukan join tabel Matakuliah dan Dosen
+   
+3. Lakukan join table JadwalMengajar, Dosen, dan Matakuluan
+   
+4. Lakukan join tabel KrsMahasiswa, Mahasiswa, Matakuliah, dan Dosen
 
-### 1.	Tampilkan pegawai yang gajinya bukan 2.000.000 dan 1.250.000 !
+## JOIN table Mahasiswa dan Dosen
 
-Jawab :
+### untuk tabel mahasiswa :
+![1](https://github.com/Berrrnattttt/Ferry_Bernat-5/assets/170847626/7ba1deeb-b989-472b-b8ea-9e8d31c9c727)
 
-Untuk perintahnya bisa menggunkan perintah seperti ini :
+### untuk tabel dosen :
+![2](https://github.com/Berrrnattttt/Ferry_Bernat-5/assets/170847626/fefeb17c-ead7-42ca-b370-45ac7f190e26)
 
-`SELECT * FROM pegawai WHERE gajih NOT IN (2000000, 1250000);`
+### untuk tabel krs mahasiswa :
+![3](https://github.com/Berrrnattttt/Ferry_Bernat-5/assets/170847626/a61687b0-2b2d-496e-ac05-d76cc260393a)
 
-Dan hasilnya akan seperti ini :
+### untuk tabel matakuliah :
+![4](https://github.com/Berrrnattttt/Ferry_Bernat-5/assets/170847626/122c15ca-1d4f-4ada-a75d-3853fb30dbc0)
 
-![1](https://github.com/Berrrnattttt/Ferry_Berrnattt/assets/170847626/a3cc27fb-8745-4799-8d7e-38f6871d8bc1)
+### untuk tabel jadwal mengajar :
+![5](https://github.com/Berrrnattttt/Ferry_Bernat-5/assets/170847626/bcd93936-49da-419d-8e3d-bcf543a91f68)
 
-### 2.	Tampilkan pegawai yang tunjangannya NULL!
+# 1. Lakukan Join Table Mahasiswa Dan Dosen
 
-Jawab :
+## Untuk perintah bisa menggunakan (INNER JOIN)
 
-Untuk perintahnya bisa menggunkan perintah seperti ini :
+`SELECT tb_mahasiswa.nim, tb_mahasiswa.nama, tb_mahasiswa.jk, tb_dosen.nama AS "Dosen" FROM tb_mahasiswa INNER JOIN tb_dosen ON tb_dosen.kd_ds = tb_mahasiswa.kd_ds;`
 
-`SELECT * FROM pegawai WHERE tunjangan IS NULL; `
+Hasilnya akan seperti ini :
+![1 1](https://github.com/Berrrnattttt/Ferry_Bernat-5/assets/170847626/28cd5990-e07e-4156-8bf4-d45d40b95c5f)
 
-Dan hasilnya akan seperti ini :
+> Note Digunakan untuk menampilkan baris tabel yang memiliki nilai yang sama pada kolom yang terkait
 
-![2](https://github.com/Berrrnattttt/Ferry_Berrnattt/assets/170847626/22f8b778-e0b6-4f12-80c1-7053b2b05230)
+## Untuk perintah bisa menggunakan (LEFT JOIN)
 
-### 3.	Tampilkan pegawai yang tunjangannya tidak NULL!
+`SELECT tb_mahasiswa.nim, tb_mahasiswa.nama, tb_mahasiswa.jenis_kelamin, tb_dosen.nama AS "Dosen"
+FROM tb_mahasiswa LEFT JOIN tb_dosen ON tb_dosen.kd_ds = tb_mahasiswa.kd_ds;`
 
-Jawab :
+Hasilnya akan seperti ini :
+![1 2](https://github.com/Berrrnattttt/Ferry_Bernat-5/assets/170847626/41c55ca1-b1dd-49ba-bf0b-b86edfbb9276)
 
-Untuk perintahnya bisa menggunkan perintah seperti ini :
-	
-`SELECT * FROM pegawai WHERE tunjangan IS NOT NULL;`
+> Note Menampilkan semua data pada table A dan sebagian data pada table B yang bersinggungan dengan table A
 
-Dan hasilnya akan seperti ini :
+## Untuk perintah bisa menggunakan (RIGHT JOIN)
 
-![3](https://github.com/Berrrnattttt/Ferry_Berrnattt/assets/170847626/2c54124a-2c0f-4e67-9640-8eaee39c85a9)
+`SELECT tb_mahasiswa.nim, tb_mahasiswa.nama, tb_mahasiswa.jk, tb_dosen.nama AS "Dosen" 
+FROM tb_mahasiswa 
+RIGHT JOIN tb_dosen ON tb_dosen.kd_ds = tb_mahasiswa.kd_ds;`
 
-## HASIL DARI 1 - 3
+Hasilnya akan seperti ini :
+![1 3](https://github.com/Berrrnattttt/Ferry_Bernat-5/assets/170847626/d6613b58-4553-4798-bd79-ba8a32763556)
 
-![1-3](https://github.com/Berrrnattttt/Ferry_Berrnattt/assets/170847626/0eb953d1-6b3f-4d1a-b052-48fe51b6fd69)
+> Note Menampilkan semua data pada table B dan sebagian data pada table A yang bersinggungan dengan table B
 
-### 4.	Tampilkan/hitung jumlah baris/record tabel pegawai!
+# 2 Lakukan join tabel Matakuliah dan Dosen #
 
-Jawab :
+## Untuk perintah bisa menggunakan :
 
-Untuk perintahnya bisa menggunkan perintah seperti ini :
+`SELECT tb_matakuliah.kd_mk, tb_matakuliah.nama, tb_matakuliah.sks, tb_dosen.nama AS "Dosen Pengampu"
+FROM tb_jadwalmengajar
+LEFT JOIN tb_matakuliah ON tb_jadwalmengajar.kd_mk = tb_matakuliah.kd_mk
+LEFT JOIN tb_dosen ON tb_jadwalmengajar.kd_ds = tb_dosen.kd_ds;`
 
-`SELECT COUNT(*) AS jumlah_baris FROM pegawai;`
+Hasilnya akan seperti ini :
+![1 4](https://github.com/Berrrnattttt/Ferry_Bernat-5/assets/170847626/f292b360-a5a7-4e3f-98cd-5416f4584a3e)
 
-Dan hasilnya akan seperti ini :
+## Untuk perintah bisa menggunakan :
 
-![4](https://github.com/Berrrnattttt/Ferry_Berrnattt/assets/170847626/20c528b8-25c3-4f6f-8e2d-83fc8eb766c0)
+`SELECT tb_jadwalmengajar.hari, tb_jadwalmengajar.jam, tb_jadwalmengajar.ruang, tb_dosen.nama AS "Dosen Pengampu", tb_jadwalmengajar.kd_mk, tb_matakuliah.nama, tb_matakuliah.sks 
+FROM tb_jadwalmengajar 
+LEFT JOIN tb_matakuliah ON tb_jadwalmengajar.kd_mk = tb_matakuliah.kd_mk 
+LEFT JOIN tb_dosen ON tb_jadwalmengajar.kd_ds = tb_dosen.kd_ds;`
 
-### 5.	Tampilkan/hitung jumlah total gaji di tabel pegawai!
+Hasilnya akan seperti ini :
 
-Jawab :
+![1 5](https://github.com/Berrrnattttt/Ferry_Bernat-5/assets/170847626/c36b1f01-f552-4745-9858-abb88cc13549)
 
-Untuk perintahnya bisa menggunkan perintah seperti ini :
+# 3.Lakukan join tabel KrsMahasiswa, Mahasiswa, Matakuliah, dan Dosen #
 
+## Untuk perintah bisa menggunakan :
 
-`SELECT SUM(gaji) AS total_gaji FROM pegawai; `
+`SELECT tb_mahasiswa.nim, tb_mahasiswa.nama AS "nama", tb_matakuliah.nama AS "Matakuliah", tb_matakuliah.sks, tb_dosen.nama AS "Dosen Pengampu"
+FROM tb_krsmahasiswa
+JOIN tb_mahasiswa ON tb_krsmahasiswa.nim = tb_mahasiswa.nim
+JOIN tb_matakuliah ON tb_krsMahasiswa.kd_mk = tb_matakuliah.kd_mk
+JOIN tb_dosen ON tb_krsmahasiswa.kd_ds = tb_dosen.kd_ds;`
 
-Dan hasilnya akan seperti ini :
+Hasilnya akan seperti ini :
 
-![5](https://github.com/Berrrnattttt/Ferry_Berrnattt/assets/170847626/3e6e9b78-5f22-43d4-84d8-ea8aaf67c136)
+![1 6](https://github.com/Berrrnattttt/Ferry_Bernat-5/assets/170847626/ed28c222-cfb6-4aba-aef0-7c397408a8be)
 
-### 6.	Tampilkan/hitung rata-rata gaji pegawai!
 
-Jawab 
-
-Untuk perintahnya bisa menggunkan perintah seperti ini :
-
-`SELECT AVG(gaji) AS rata_gaji FROM pegawai`
-
-Dan hasilnya akan seperti ini :
-
-![6](https://github.com/Berrrnattttt/Ferry_Berrnattt/assets/170847626/7d1debbd-8cc2-4e80-848a-d0853feaadbd)
-
-### 7.	Tampilkan gaji terkecil!
-
-Jawab :
-
-Untuk perintahnya bisa menggunkan perintah seperti ini :
-
-`SELECT MIN(gaji) AS gaji_terkecil FROM pegawai;`
-
-Dan hasilnya akan seperti ini :
-
-![7](https://github.com/Berrrnattttt/Ferry_Berrnattt/assets/170847626/fc689e44-b694-4a7e-a476-1dfee9c849ee)
-
-### 8.	Tampilkan gaji terbesar!
-
-Jawab 
-
-Untuk perintahnya bisa menggunkan perintah seperti ini :
-
-`SELECT MAX(gaji) AS gaji_terbesar FROM pegawai;`
-
-Dan hasilnya akan seperti ini :
-
-![8](https://github.com/Berrrnattttt/Ferry_Berrnattt/assets/170847626/e3790132-d0fa-490c-aade-c26f44ab3758)
-
-## TUGAS PRAKTIKUM 4 (TABEL HEWAN)
-1.	Tampilkan jumlah hewan yang dimiliki setiap owner
-2.	Tampilkan jumlah hewan berdasarkan spesies
-3.	Tampilkan jumlah hewan berdasarkan jenis kelamin
-4.	Tampilkan jumlah hewan berdasarkan spesies dan jenis kelamin
-5.	Tampilkan jumlah hewan berdasarkan spesis (cat dan dog saja) dan jenis kelamin
-6.	Tampilkan jumlah hewan berdasarkan jenis kelamin yang diketahui saja
-
-PENJELASAN
-
-### 1. Tampilkan jumlah hewan yang dimiliki setiap owner
-
-Jawab :
-
-Untuk perintahnya bisa menggunkan perintah seperti ini :
-
-`SELECT owner, COUNT(*) AS Jumlah_hewan_setiap_owner FROM hewan GROUP BY owner; `
-
-Dan hasilnya akan seperti ini :
-
-![hewan 1](https://github.com/Berrrnattttt/Ferry_Berrnattt/assets/170847626/d915f2eb-3907-4237-86c4-7c930709783d)
-
-### 2.	Tampilkan jumlah hewan berdasarkan spesies
-
-Jawab :
-
-Untuk perintahnya bisa menggunkan perintah seperti ini :
-
-`SELECT Species, COUNT(*) AS Jumlah_hewan_berdasarkan_Species FROM hewan GROUP BY Species; `
-
-Dan hasilnya akan seperti ini :
-
-![hewan 2](https://github.com/Berrrnattttt/Ferry_Berrnattt/assets/170847626/8de9a260-e30f-4b80-bfd3-3ec1aa38b054)
-
-### 3.	Tampilkan jumlah hewan berdasarkan jenis kelamin
-
-Jawab :
-
-Untuk perintahnya bisa menggunkan perintah seperti ini :
-
-`SELECT sex, COUNT(*) AS Jumlah_hewan_berdasarkan_jenis_kelamin FROM hewan GROUP BY sex; `
-
-Dan hasilnya akan seperti ini :
-
-![hewan 3](https://github.com/Berrrnattttt/Ferry_Berrnattt/assets/170847626/5dde4788-49c6-4e4b-861d-127a1c25e329)
-
-### 4.	Tampilkan jumlah hewan berdasarkan spesies dan jenis kelamin
-
-Jawab :
-
-Untuk perintahnya bisa menggunkan perintah seperti ini :
-
-` SELECT species, sex, COUNT(*) AS jumlah FROM hewan GROUP BY species, sex;  `
-
-Dan hasilnya akan seperti ini :
-
-![hewan 4](https://github.com/Berrrnattttt/Ferry_Berrnattt/assets/170847626/24b2e8da-cca2-4ba4-b1c6-49bd9aa1ae4a)
-
-### 5.	Tampilkan jumlah hewan berdasarkan spesis (cat dan dog saja) dan jenis kelamin
-
-Jawab :
-
-Untuk perintahnya bisa menggunkan perintah seperti ini :
-
-` SELECT species, sex, COUNT(*) AS jumlah FROM hewan WHERE species IN ('cat', 'dog') GROUP BY species, sex;  `
-
-Dan hasilnya akan seperti ini :
-
-![hewan 5](https://github.com/Berrrnattttt/Ferry_Berrnattt/assets/170847626/1921ec83-1f21-40c2-b517-b1ba74c4844b)
-
-### 6.	Tampilkan jumlah hewan berdasarkan jenis kelamin yang diketahui saja
-
-Jawab :
-
-Untuk perintahnya bisa menggunkan perintah seperti ini :
-
-` SELECT sex, COUNT(*) AS jumlah FROM hewan GROUP BY sex;   `
-
-Dan hasilnya akan seperti ini :
-
-![hewan 6](https://github.com/Berrrnattttt/Ferry_Berrnattt/assets/170847626/726b3516-167f-411c-98ce-1c5870b7a81c)
+> ### Join tabel
+>  join tabel merujuk pada penggabungan baris-baris data dari dua atau lebih tabel berdasarkan kolom yang memiliki nilai yang sama di setiap tabel. Join tabel memungkinkan kita untuk menggabungkan data dari tabel yang berbeda untuk menghasilkan hasil yang lebih lengkap dan terkait.
+
+> ### Jenis2
+> 1. **INNER JOIN** : Menggabungkan baris-baris data dari dua tabel berdasarkan kondisi join yang ditentukan. Hanya baris yang memiliki nilai yang cocok di kedua tabel yang akan dimasukkan ke dalam hasil join.
+>
+> 2. **LEFT JOIN** : Menggabungkan semua baris dari tabel kiri (left table) dengan baris yang cocok dari tabel kanan (right table) berdasarkan kondisi join. Jika tidak ada nilai yang cocok dalam tabel kanan, kolom-kolom dari tabel kanan akan memiliki nilai NULL dalam hasil join.
+>
+> 3. **RIGHT JOIN** : Adalah kebalikan dari LEFT JOIN. Ini menggabungkan semua baris dari tabel kanan dengan baris yang cocok dari tabel kiri berdasarkan kondisi join. Jika tidak ada nilai yang cocok dalam tabel kiri, kolom-kolom dari tabel kiri akan memiliki nilai NULL dalam hasil join.
+>
+> 4. **FULL JOIN** : Menggabungkan semua baris dari kedua tabel, baik dari tabel kiri maupun tabel kanan, berdasarkan kondisi join. Ini akan menghasilkan semua baris dari kedua tabel, dan jika tidak ada nilai yang cocok dalam salah satu tabel, kolom-kolom yang tidak cocok akan memiliki nilai NULL dalam hasil join.
